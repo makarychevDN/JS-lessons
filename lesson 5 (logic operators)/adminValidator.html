@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script>
+		
+			let login = prompt("кто там?", [""]);
+			
+			if(login == "Админ"){
+				
+				let password = prompt("пароль?", [""]);
+				
+				if(password == "Я главный"){
+					alert("Здравствуйте!");
+				}
+				else{
+					alert(!password ? "Отмена" : "Неверный пароль");
+				}
+			}
+			else{
+				alert(!login ? "Отмена" : "Я вас не знаю");
+ 			}
+			
+		</script>
+	</body>
+</html>
