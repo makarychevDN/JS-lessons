@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script>
+		
+			//Task1();
+			//Task2();
+			Task3();
+			
+			function Task1(){			
+				let user = {};
+				user.name = "John";
+				user.surname = "Smith";
+				user.name = "Pete";
+				delete user.name;
+				
+				for(let prop in user){
+					alert(user[prop]);
+				}
+			}
+			
+			function Task2(){			
+				let emptyObject = {};
+				let notEmptyObject = {
+					something : "something",
+				};
+				
+				alert(IsEmpty(emptyObject));
+				alert(IsEmpty(notEmptyObject));
+			}
+			
+			function IsEmpty(obj){				
+				for(let prop in obj){
+					return false;
+				}
+				
+				return true;
+				
+			}
+			
+			function Task3(){			
+				let salaries = {
+				  John: 100,
+				  Ann: 160,
+				  Pete: 130
+				}
+				
+				alert(FindSumOfProperties(salaries));
+			}
+			
+			function FindSumOfProperties(obj){				
+				let sum = 0;
+				
+				for(let prop in obj){
+					sum += obj[prop];
+				}
+				
+				return sum;
+			}
+			
+			function Task3(){			
+				let menu = {
+					width: 200,
+					height: 300,
+					title: "My menu"
+				};
+				
+				MultiplyNumeric(menu);
+				
+				for(let prop in menu){					
+					alert(menu[prop]);		
+				}	
+			}
+			
+			function MultiplyNumeric(obj){			
+				for(let prop in obj){					
+					if(typeof obj[prop] == "number"){  
+						obj[prop]*= 2; 
+					}		
+				}			
+			}
+			
+		</script>
+	</body>
+</html>
