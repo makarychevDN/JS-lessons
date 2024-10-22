@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script>
+			
+			getInputFromUser();
+			
+			function getInputFromUser(){			
+				let input;			
+				
+				do{
+					input = prompt("введите число");
+				} while (!isFinite(input));
+
+				if (input === null || input === '') return null;
+
+				return Number(num);
+			}
+		</script>
+	</body>
+</html>
