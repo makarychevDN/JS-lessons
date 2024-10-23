@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script>
+		
+			alert( extractCurrencyValue('$120') === 120 );
+			
+			function extractCurrencyValue(inputString) {
+			  return Number(inputString.slice(1));
+			}
+			
+		</script>
+	</body>
+</html>

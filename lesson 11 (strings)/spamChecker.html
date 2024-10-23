@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script>
+			
+			let forbiddenWords = {
+				forbiddenWord1 : "viagra",
+				forbiddenWord2 : "xxx",
+			}
+			
+			alert(checkSpam(prompt("введите слово для проверки на спам")));
+			
+			function checkSpam(inputString){
+			
+				for(let prop in forbiddenWords){
+					if(inputString.toLowerCase().includes(forbiddenWords[prop])) return true;
+				}
+				
+				return false;
+			}
+			
+		</script>
+	</body>
+</html>
