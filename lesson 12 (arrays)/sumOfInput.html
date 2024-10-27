@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script>
+									
+			alert(sumInput());
+			
+			function sumInput() {
+				let inputValue = 0;
+				let numbers = [];
+				
+				while(CheckInputIsValid(inputValue)){
+					numbers.push(Number(inputValue));
+					inputValue = prompt("Введите число");
+				}
+				
+				let sum = 0;
+				for(let item of numbers){
+					sum += item;
+				}
+
+				return sum;				
+			}
+			
+			function CheckInputIsValid(input){			
+				if(input === "" || input == null)
+					return false;
+				
+				return isFinite(input);
+			}
+			
+		</script>
+	</body>
+</html>
