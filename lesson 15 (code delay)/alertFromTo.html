@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script>										
+			
+			function printNumbersByInterval(from, to) {
+				let counter = from;
+				
+				let timerID = setInterval(() => {
+					alert(counter++);
+					
+					if(counter >= to){
+						clearInterval(timerID);
+					}
+				}
+				, 1000);
+			}
+			
+			function printNumbersBySetTimeout(from, to) {
+				let counter = from;
+				
+				let timerID = setTimeout(function iterate(){
+					alert(counter++);
+					
+					if(counter >= to){
+						clearInterval(timerID);
+					}
+					else{
+						iterate();
+					}					
+				})
+			}
+			
+			//printNumbersByInterval(1, 10);	
+			printNumbersBySetTimeout(5, 10);	
+
+		</script>
+	</body>
+</html>
