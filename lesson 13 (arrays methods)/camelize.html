@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<script>
+			
+			alert(camelize("background-color"));
+			alert(camelize("list-style-image"));
+			alert(camelize("-webkit-transition"));
+			
+			function camelize(value){
+				let charsArray = value.split("-");
+				charsArray = charsArray.map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1));				
+				return charsArray.join("");
+			}
+
+		</script>
+	</body>
+</html>
